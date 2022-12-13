@@ -1,0 +1,9 @@
+{
+  "plugins": ["prettier"],
+  "extends": ["prettier"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "prettier/prettier": 2
+  },
+  "ignorePatterns": ["/scripts", "/node_modules"]
+}
