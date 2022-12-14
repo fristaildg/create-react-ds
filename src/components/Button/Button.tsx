@@ -4,17 +4,24 @@ import {
   ForwardedRef,
   forwardRef,
 } from 'react';
+import styled from 'styled-components';
+import { color, ColorProps } from 'styled-system';
 
 export type ButtonProps = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 >;
 
+const StyledButton = styled.button`
+  ${color}
+  ${({ theme }) => theme.Button}
+`;
+
 const Button = (
-  buttonAttrs: ButtonProps,
+  buttonAttrs: ButtonProps & ColorProps,
   ref: ForwardedRef<HTMLButtonElement>,
 ) => {
-  return <button {...buttonAttrs} ref={ref}></button>;
+  return <StyledButton {...buttonAttrs} ref={ref}></StyledButton>;
 };
 
 export default forwardRef(Button);
