@@ -12,7 +12,7 @@ export type ButtonProps = DetailedHTMLProps<
   HTMLButtonElement
 >;
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<ColorProps>`
   ${color}
   ${({ theme }) => theme.Button}
 `;
