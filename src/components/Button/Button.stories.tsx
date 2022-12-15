@@ -5,4 +5,8 @@ export default {
   title: 'Button',
   decorators: [StoryDecorator],
 };
-export const Default = () => <Button>Click</Button>;
+export const Default = () => (
+  <Button color="text" bg="primary">
+    Click
+  </Button>
+);
