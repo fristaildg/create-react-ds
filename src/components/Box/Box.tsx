@@ -1,5 +1,4 @@
 import {
-  FC,
   PropsWithChildren,
   forwardRef,
   ForwardedRef,
