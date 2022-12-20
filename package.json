@@ -2,7 +2,6 @@
   "name": "create-react-ds",
   "version": "0.8.0",
   "description": "React Design System scaffolding tool",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
@@ -19,7 +18,7 @@
   },
   "homepage": "https://github.com/fristaildg/create-design-system#readme",
   "bin": {
-    "create-react-ds": "index.js"
+    "create-react-ds": "dist/index.js"
   },
   "dependencies": {
     "@npmcli/package-json": "^3.0.0",
