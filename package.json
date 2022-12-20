@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild index.ts --bundle --minify --platform=node --outfile=dist/index.js && cp -R template dist/template"
+    "clean": "rimraf dist",
+    "build": "npm run clean && esbuild index.ts --bundle --minify --platform=node --outfile=dist/index.js && cp -R template dist/template"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "@types/node": "^18.11.17",
     "@types/npmcli__package-json": "^2.0.0",
     "esbuild": "^0.16.10",
+    "rimraf": "^3.0.2",
     "typescript": "^4.9.4"
   },
   "files": [
