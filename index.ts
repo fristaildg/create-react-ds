@@ -1,8 +1,8 @@
 #! /usr/bin/env node
 
-// import fs from 'fs';
+import fs from 'fs';
 import path from 'path';
-import cpy from 'cpy';
+// import cpy from 'cpy';
 import PackageJson from '@npmcli/package-json';
 import { exec } from 'child_process';
 
@@ -10,8 +10,12 @@ const nameArg = process.argv[2] || 'my-design-system';
 const templateSrc = path.join(__dirname, 'template');
 const destination = path.join(process.cwd(), nameArg);
 
-const run = async () => {
-  await cpy(`${templateSrc}/**`, destination);
+
+fs.cp(templateSrc, destination, { recursive: true }, async (error) => {
+  if (error) {
+    console.log(error);
+    return;
+  }
 
   const pkgJson = await PackageJson.load(destination);
 
@@ -30,6 +34,4 @@ const run = async () => {
 
     console.log('Done!, Time to create your awesome Design System!')
   });
-}
-
-run();
+});
