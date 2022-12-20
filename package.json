@@ -1,5 +1,5 @@
 {
-  "name": "create-design-system",
+  "name": "create-react-ds",
   "version": "0.1.0",
   "description": "React Design System scaffolding tool",
   "main": "index.js",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/fristaildg/create-design-system#readme",
   "bin": {
-    "create-design-system": "index.js"
+    "create-react-ds": "index.js"
   },
   "dependencies": {
     "@npmcli/package-json": "^3.0.0"
