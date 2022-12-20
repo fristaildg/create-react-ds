@@ -4,7 +4,8 @@
   "description": "React Design System scaffolding tool",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild index.ts --bundle --minify --platform=node --outfile=index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,13 @@
     "create-react-ds": "index.js"
   },
   "dependencies": {
-    "@npmcli/package-json": "^3.0.0"
+    "@npmcli/package-json": "^3.0.0",
+    "cpy": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "@types/npmcli__package-json": "^2.0.0",
+    "esbuild": "^0.16.10",
+    "typescript": "^4.9.4"
   }
 }
