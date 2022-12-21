@@ -1,5 +1,4 @@
 const { build } = require('esbuild');
-const { dependencies } = require('../package.json');
 
 const entryFile = 'src/index.ts';
 const sharedConfig = {
@@ -7,7 +6,6 @@ const sharedConfig = {
   entryPoints: [entryFile],
   minify: true,
   sourcemap: true,
-  external: Object.keys(dependencies),
   logLevel: 'info',
   jsx: 'automatic',
 };
