@@ -1,9 +1,12 @@
 {
-  "plugins": ["prettier"],
-  "extends": ["prettier"],
+  "plugins": ["prettier", "jest"],
+  "extends": ["prettier", "plugin:jest/recommended"],
   "parser": "@typescript-eslint/parser",
   "rules": {
     "prettier/prettier": 2
+  },
+  "env": {
+    "jest/globals": true
   },
   "ignorePatterns": ["/scripts", "/node_modules"]
 }
