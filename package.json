@@ -1,6 +1,6 @@
 {
   "name": "create-react-ds",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "description": "React Design System scaffolding tool",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
