@@ -1,7 +1,6 @@
 {
   "name": "create-design-system",
   "version": "0.1.0",
-  "description": "React Design System boilerplate",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -14,12 +13,8 @@
     "prepare": "husky install",
     "dev": "npx ladle serve"
   },
-  "author": "Luis Fernandez",
-  "license": "ISC",
-  "dependencies": {
-    "esbuild": "0.16.4"
-  },
   "devDependencies": {
+    "esbuild": "0.16.4",
     "@ladle/react": "^2.4.5",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
