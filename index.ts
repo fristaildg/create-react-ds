@@ -2,7 +2,6 @@
 
 import fs from 'fs';
 import path from 'path';
-// import cpy from 'cpy';
 import PackageJson from '@npmcli/package-json';
 import { exec } from 'child_process';
 
@@ -10,7 +9,9 @@ const nameArg = process.argv[2] || 'my-design-system';
 const templateSrc = path.join(__dirname, 'template');
 const destination = path.join(process.cwd(), nameArg);
 
-fs.rename(path.join(templateSrc, '_gitignore'), path.join(templateSrc, '.gitignore'), (error) => console.log(error));
+fs.rename(path.join(templateSrc, '_gitignore'), path.join(templateSrc, '.gitignore'), (error) => {
+  if (error) console.log(error);
+});
 
 fs.cp(templateSrc, destination, { recursive: true }, async (error) => {
   if (error) {
@@ -22,7 +23,7 @@ fs.cp(templateSrc, destination, { recursive: true }, async (error) => {
 
   pkgJson.update({
     name: nameArg,
-  })
+  });
 
   await pkgJson.save();
 

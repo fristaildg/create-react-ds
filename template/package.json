@@ -1,5 +1,5 @@
 {
-  "name": "entropy-ds",
+  "name": "my-design-system",
   "version": "0.1.0",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
