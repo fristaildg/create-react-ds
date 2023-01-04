@@ -15,6 +15,7 @@
 - Eslint and prettier for code linting and formatting
 
 ## Usage
+This package requires node >=18.12.1
 
 ```bash
 npx create-react-ds my-design-system-name
