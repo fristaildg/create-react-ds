@@ -10,7 +10,10 @@ const templateSrc = path.join(__dirname, 'template');
 const destination = path.join(process.cwd(), nameArg);
 
 fs.rename(path.join(templateSrc, '_gitignore'), path.join(templateSrc, '.gitignore'), (error) => {
-  if (error) console.log(error);
+  if (error) {
+    console.log(error);
+    return;
+  };
 });
 
 fs.cp(templateSrc, destination, { recursive: true }, async (error) => {
