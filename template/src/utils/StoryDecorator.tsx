@@ -23,7 +23,7 @@ const StoryDecorator: SD = (Component) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box height="100vh" width="100vw" bg="background" color="text">
+      <Box height="100vh" width="100vw">
         <Button onClick={handleSetTheme}>Change theme</Button>
         <p>{theme.name}</p>
         <Component />

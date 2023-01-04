@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
 import { ThemeProvider as ScThemeProvider } from 'styled-components';
-import themeDefault from 'theme/default';
+import themeDefault from '../../theme/default';
 
 export type Theme = {
   name: string;
