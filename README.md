@@ -7,12 +7,12 @@
 
 - Supports Typescript by default
 - Bundles `commonjs` and `es` formats
-- Rollup and Esbuild for bundling
-- Jest and React Testing Library for testing
-- Styled Components and Styled System for styling
+- [Rollup](https://rollupjs.org/) and [Esbuild](https://esbuild.github.io/) for bundling
+- [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing
+- [Styled Components](https://styled-components.com/) and [Styled System](https://styled-system.com/) for styling
 - Easy Theming functionality
-- Ladle for local development / component stories
-- Eslint and prettier for code linting and formatting
+- [Ladle](https://ladle.dev/) for local development / component stories
+- [Eslint](https://eslint.org/) and [Prettier](https://prettier.io/) for code linting and formatting
 
 ## Usage
 This package requires node `>=18.12.1`
@@ -60,5 +60,6 @@ npm publish
 ```
 
 This will bump your library's version according to the semver standards
+
 
 Made with LOL! (Lots of love) 😜
