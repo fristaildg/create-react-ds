@@ -8,5 +8,5 @@
   "env": {
     "jest/globals": true
   },
-  "ignorePatterns": ["/scripts", "/node_modules"]
+  "ignorePatterns": ["/dist", "/node_modules", "/scripts"]
 }

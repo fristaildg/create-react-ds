@@ -1,10 +1,4 @@
-import {
-  PropsWithChildren,
-  forwardRef,
-  ForwardedRef,
-  DetailedHTMLProps,
-  HTMLAttributes,
-} from 'react';
+import { PropsWithChildren, forwardRef, ForwardedRef } from 'react';
 import styled from 'styled-components';
 import {
   color,
@@ -17,31 +11,10 @@ import {
   position,
   shadow,
   compose,
-  SpaceProps,
-  TypographyProps,
-  LayoutProps,
-  FlexProps,
-  GridProps,
-  BorderProps,
-  PositionProps,
-  ShadowProps,
-  ColorProps,
 } from 'styled-system';
+import { ComposeStyledProps, DivAttributes } from 'types';
 
-type DivAttributes = DetailedHTMLProps<
-  HTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
->;
-
-type BoxProps = SpaceProps &
-  ColorProps &
-  TypographyProps &
-  LayoutProps &
-  FlexProps &
-  GridProps &
-  BorderProps &
-  PositionProps &
-  ShadowProps;
+export type BoxProps = DivAttributes & ComposeStyledProps & PropsWithChildren;
 
 const StyledBox = styled.div`
   ${compose(
@@ -57,10 +30,7 @@ const StyledBox = styled.div`
   )}
 `;
 
-const Box = (
-  props: PropsWithChildren & DivAttributes & BoxProps,
-  ref: ForwardedRef<HTMLDivElement>,
-) => {
+const Box = (props: BoxProps, ref: ForwardedRef<HTMLDivElement>) => {
   return <StyledBox {...props} ref={ref} />;
 };
 

@@ -5,6 +5,7 @@ import { defaultTheme } from 'theme';
 import { useState } from 'react';
 import { Button } from 'components/Button';
 import { Theme } from 'components/ThemeProvider/ThemeProvider';
+import { Text } from 'components/Text';
 
 const darkTheme = {
   ...defaultTheme,
@@ -23,9 +24,11 @@ const StoryDecorator: SD = (Component) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box height="100vh" width="100vw">
+      <Box height="100vh" width="100vw" backgroundColor="background">
         <Button onClick={handleSetTheme}>Change theme</Button>
-        <p>{theme.name}</p>
+        <Text color="text" as="p">
+          {theme.name}
+        </Text>
         <Component />
       </Box>
     </ThemeProvider>
