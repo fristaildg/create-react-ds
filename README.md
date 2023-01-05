@@ -62,4 +62,4 @@ npm publish
 This will bump your library's version according to the semver standards
 
 
-Made with LOL! (Lots of love) 😜
+Made with Love!! ❤️
