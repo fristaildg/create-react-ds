@@ -7,7 +7,7 @@ import {
   color,
   compose,
 } from 'styled-system';
-import { DivAttributes } from 'types';
+import { DivAttributes } from '../../types';
 
 export type TextProps = DivAttributes &
   TypographyProps &

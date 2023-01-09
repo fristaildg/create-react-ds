@@ -61,5 +61,15 @@ npm publish
 
 This will bump your library's version according to the semver standards
 
+## Using your newly created components library
+
+Once your library is published or packed, you can install it into your react application and start using it!
+
+### Install the component library and its peer dependencies
+```bash
+npm install path-to-your-library styled-components styled-system
+```
+
+If your app uses typescript, you will also need to install `@types/styled-system` as a dev dependency.
 
 Made with Love!! ❤️

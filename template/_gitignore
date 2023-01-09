@@ -1,3 +1,4 @@
 /node_modules
 /dist
 /.rollup.cache
+/src/.DS_Store

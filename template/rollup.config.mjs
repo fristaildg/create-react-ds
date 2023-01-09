@@ -3,10 +3,7 @@ import esbuild from 'rollup-plugin-esbuild';
 
 export default [
   {
-    plugins: [
-      typescript({ declaration: true, declarationDir: 'dist' }),
-      esbuild(),
-    ],
+    plugins: [typescript(), esbuild()],
     input: ['./src/index.ts', './src/theme/index.ts'],
     external: (id) => !/^[./]/.test(id),
     output: [

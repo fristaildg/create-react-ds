@@ -12,7 +12,7 @@ import {
   shadow,
   compose,
 } from 'styled-system';
-import { ComposeStyledProps, DivAttributes } from 'types';
+import { ComposeStyledProps, DivAttributes } from '../../types';
 
 export type BoxProps = DivAttributes & ComposeStyledProps & PropsWithChildren;
 

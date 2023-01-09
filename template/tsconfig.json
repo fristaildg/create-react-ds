@@ -4,6 +4,7 @@
     "baseUrl": "src",
     "emitDeclarationOnly": true,
     "declaration": true, // Generate corresponding .d.ts file
+    "declarationMap": true,
     "esModuleInterop": true, // Disables namespace imports (import * as fs from "fs") and enables CJS/AMD/UMD style imports (import fs from "fs")
     "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
     "importHelpers": true,
