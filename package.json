@@ -1,8 +1,17 @@
 {
   "name": "create-react-ds",
-  "version": "0.33.0",
+  "version": "0.34.0",
   "description": "React Design System scaffolding tool",
-  "keywords": ["react", "typescript", "design system", "components library", "esbuild", "rollup", "styled components", "styled system"],
+  "keywords": [
+    "react",
+    "typescript",
+    "design system",
+    "components library",
+    "esbuild",
+    "rollup",
+    "styled components",
+    "styled system"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
