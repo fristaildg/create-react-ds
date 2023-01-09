@@ -72,4 +72,20 @@ npm install path-to-your-library styled-components styled-system
 
 If your app uses typescript, you will also need to install `@types/styled-system` as a dev dependency.
 
+### Import `ThemeProvider` in the root of your app
+
+It will typically be in the `App` component, or in the `_app.tsx` file if it's a next app.
+Wrap your main component in `ThemeProvider` so that you can leverage the theming functionality across your library's components in your app.
+
+```jsx
+import { ThemeProvider } from 'your-library';
+...
+
+return (
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>
+);
+```
+
 Made with Love!! ❤️
