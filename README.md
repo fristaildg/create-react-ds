@@ -1,4 +1,5 @@
 # Create React DS
+
 > CLI for bootstrapping your own awesome React design system / components library!
 
 [![NPM](https://img.shields.io/npm/v/create-react-ds)](https://www.npmjs.com/package/create-react-ds)
@@ -15,7 +16,9 @@
 - [Eslint](https://eslint.org/) and [Prettier](https://prettier.io/) for code linting and formatting
 
 ## Usage
-This package requires node `>=18.12.1`
+
+This packa
+ge requires node `>=18.12.1`
 
 ```bash
 npx create-react-ds my-design-system-name
@@ -87,5 +90,9 @@ return (
   </ThemeProvider>
 );
 ```
+
+> **You are now ready to start using your components in your app!**
+>
+> *For more info on how to leverage the usage of the Theme and Styled Props, please refer to [Styled Components](https://styled-components.com/) and [Styled System](https://styled-system.com/) docs respectively.*
 
 Made with Love!! ❤️
