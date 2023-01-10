@@ -15,7 +15,7 @@
     "lint:fix": "eslint --fix src/**/*.ts src/**/*.tsx",
     "_prepare": "husky install",
     "dev": "npx ladle serve",
-    "component": "node scripts/generate-component.js"
+    "component": "node scripts/generate-component"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
