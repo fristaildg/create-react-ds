@@ -17,12 +17,14 @@ fs.rename(path.join(templateSrc, '_gitignore'), path.join(templateSrc, '.gitigno
   };
 });
 
+console.log(chalk.blue.bold('Copying template files to destination'));
 fs.cp(templateSrc, destination, { recursive: true }, async (error) => {
   if (error) {
     console.log(error);
     return;
   }
 
+  console.log(chalk.green.bold('Done ✔'));
   const pkgJson = await PackageJson.load(destination);
 
   pkgJson.update({
@@ -31,7 +33,7 @@ fs.cp(templateSrc, destination, { recursive: true }, async (error) => {
 
   await pkgJson.save();
 
-  console.log(chalk.blue.bold('Installing dependencies, this might take a few minutes ☕️'));
+  console.log(chalk.blue.bold('Installing dependencies, this might take some minutes... ☕️'));
   exec('npm install', { cwd: destination }, (error) => {
     if (error) {
       console.log(error);
