@@ -1,4 +1,4 @@
-import StoryDecorator from 'utils/StoryDecorator';
+import StoryDecorator from '../../utils/StoryDecorator';
 import Button from './Button';
 
 export default {

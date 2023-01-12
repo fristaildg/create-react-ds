@@ -1,11 +1,11 @@
-import { StoryDecorator as SD } from '@ladle/react';
-import { ThemeProvider } from 'components/ThemeProvider';
-import { Box } from 'components/Box';
-import { defaultTheme } from 'theme';
 import { useState } from 'react';
-import { Button } from 'components/Button';
-import { Theme } from 'components/ThemeProvider/ThemeProvider';
-import { Text } from 'components/Text';
+import { StoryDecorator as SD } from '@ladle/react';
+import { ThemeProvider } from '../components/ThemeProvider';
+import { Box } from '../components/Box';
+import { defaultTheme } from '../theme';
+import { Button } from '../components/Button';
+import { Theme } from '../components/ThemeProvider/ThemeProvider';
+import { Text } from '../components/Text';
 
 const darkTheme = {
   ...defaultTheme,
