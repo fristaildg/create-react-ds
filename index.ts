@@ -1,45 +1,31 @@
 #! /usr/bin/env node
-
-import fs from 'fs';
 import path from 'path';
-import PackageJson from '@npmcli/package-json';
-import { exec } from 'child_process';
-import chalk from 'chalk';
+import { program } from 'commander';
+import runLocalMode from './src/runLocalMode';
+import runStandaloneMode from './src/runStandaloneMode';
 
-const nameArg = process.argv[2] || 'my-design-system';
+program
+  .version('0.36.0', '-v, --version')
+  .usage('[OPTIONS]...')
+  .argument('[string]', 'Name of the library')
+  .option('-m, --mode <string>', 'Select if it is local or standalone (default)')
+  .parse(process.argv)
+
+const options = program.opts();
+const nameArg = program.args[0] || 'my-design-system';
 const templateSrc = path.join(__dirname, 'template');
 const destination = path.join(process.cwd(), nameArg);
 
-fs.rename(path.join(templateSrc, '_gitignore'), path.join(templateSrc, '.gitignore'), (error) => {
-  if (error) {
-    console.log(error);
-    return;
-  };
+const isLocalMode = options.mode && options.mode === 'local';
+const isStandaloneMode = !isLocalMode || options.mode === 'standalone';
+
+if (isLocalMode) runLocalMode({
+  templateSrc,
+  nameArg,
 });
 
-console.log(chalk.blue.bold('Copying template files to destination'));
-fs.cp(templateSrc, destination, { recursive: true }, async (error) => {
-  if (error) {
-    console.log(error);
-    return;
-  }
-
-  console.log(chalk.green.bold('Done ✔'));
-  const pkgJson = await PackageJson.load(destination);
-
-  pkgJson.update({
-    name: nameArg,
-  });
-
-  await pkgJson.save();
-
-  console.log(chalk.blue.bold('Installing dependencies, this might take some minutes... ☕️'));
-  exec('npm install', { cwd: destination }, (error) => {
-    if (error) {
-      console.log(error);
-      return;
-    }
-
-    console.log(chalk.green.bold('Done!, Time to create your awesome Design System! 🎉'));
-  });
+if (isStandaloneMode) runStandaloneMode({
+  templateSrc,
+  destination,
+  nameArg,
 });
