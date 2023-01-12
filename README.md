@@ -4,6 +4,8 @@
 
 [![NPM](https://img.shields.io/npm/v/create-react-ds)](https://www.npmjs.com/package/create-react-ds)
 
+Create React DS provides a simple command line interface for generating a new project with a set of predefined components and styles. This tool helps to automate the process of creating a design system, which can save a lot of time and effort for developers. The tool also provides a set of options that can be configured to customize the design system to suit the specific needs of the project or organization.
+
 ## Features
 
 - Supports Typescript by default
