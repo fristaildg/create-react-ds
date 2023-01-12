@@ -18,6 +18,7 @@
 ## Table of contents
 
 - [Usage](#usage)
+- [Standalone mode](#standalone-mode)
 - [Development](#development)
 - [Bundle your library for publishing](#bundle-your-library-for-publishing)
 - [Test you bundle locally before publishing](#test-you-bundle-locally-before-publishing)
@@ -26,6 +27,7 @@
 - [Using your newly created components library](#using-your-newly-created-components-library)
   - [Install the component library and its peer dependencies](#install-the-component-library-and-its-peer-dependencies)
   - [Import ThemeProvider in the root of your app](#import-themeprovider-in-the-root-of-your-app)
+- [Local mode](#local-mode)
 
 
 ## Usage
