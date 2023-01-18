@@ -42,6 +42,7 @@ const runLocalMode = async ({
       scripts: {
         ...pkgJson.content.scripts,
         'ladle:serve': 'npx ladle serve',
+        'component': 'node scripts/generate-component',
       },
     });
     await pkgJson.save();
