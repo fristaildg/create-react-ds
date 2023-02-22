@@ -14,7 +14,7 @@ Create React DS provides a simple command line interface for generating a new pr
 - [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing
 - [Styled Components](https://styled-components.com/) and [Styled System](https://styled-system.com/) for styling
 - Easy Theming functionality
-- [Ladle](https://ladle.dev/) for local development / component stories
+- [Storybook](https://storybook.js.org/) for local development / component stories
 - [Eslint](https://eslint.org/) and [Prettier](https://prettier.io/) for code linting and formatting
 
 ## Table of contents
@@ -49,10 +49,10 @@ npx create-react-ds my-design-system-name
 ### Development
 
 ```bash
-npm run dev
+npm run storybook
 ```
 
-This will start ladle in http:localhost:61000
+This will start storybook in localhost
 
 ### Bundle your library for publishing
 
@@ -137,8 +137,7 @@ The resulting folder structure should look something like this:
 
 Also, some changes will have happened in your `package.json` file:
 
-- All necessary dependencies installed: `styled-components`, `styled-system`, `@ladle/react`
-- New script for running ladle locally: `ladle:serve`
+- All necessary dependencies installed: `styled-components`, `styled-system`
 
 > *For more info on how to leverage the usage of the Theme and Styled Props, please refer to [Styled Components](https://styled-components.com/) and [Styled System](https://styled-system.com/) docs respectively.*
 
