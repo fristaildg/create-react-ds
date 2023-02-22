@@ -1,6 +1,6 @@
 {
   "plugins": ["prettier", "jest"],
-  "extends": ["prettier", "plugin:jest/recommended"],
+  "extends": ["prettier", "plugin:jest/recommended", "plugin:storybook/recommended"],
   "parser": "@typescript-eslint/parser",
   "rules": {
     "prettier/prettier": 2

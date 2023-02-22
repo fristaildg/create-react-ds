@@ -26,8 +26,8 @@ const runLocalMode = async ({
   console.log(chalk.green.bold('Done ✔'));
 
   // Install Dependencies
-  console.log(chalk.white.bold(`Installing ${chalk.blue.bold('styled-components')}, ${chalk.blue.bold('styled-system')} and ${chalk.blue.bold('@ladle/react')}... ☕️`));
-  exec('npm install @ladle/react styled-components styled-system', { cwd: process.cwd() }, async (error) => {
+  console.log(chalk.white.bold(`Installing ${chalk.blue.bold('styled-components')} and ${chalk.blue.bold('styled-system')}... ☕️`));
+  exec('npm install styled-components styled-system', { cwd: process.cwd() }, async (error) => {
     if (error) {
       console.log(error);
       return;
@@ -41,7 +41,6 @@ const runLocalMode = async ({
     pkgJson.update({
       scripts: {
         ...pkgJson.content.scripts,
-        'ladle:serve': 'npx ladle serve',
         'component': 'node scripts/generate-component',
       },
     });
