@@ -12,7 +12,7 @@ Create React DS provides a simple command line interface for generating a new pr
 - Bundles `commonjs` and `es` formats
 - [Rollup](https://rollupjs.org/) and [Esbuild](https://esbuild.github.io/) for bundling
 - [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing
-- [Styled Components](https://styled-components.com/) and [Styled System](https://styled-system.com/) for styling
+- [Styled Components](https://styled-components.com/) for styling
 - Easy Theming functionality
 - [Storybook](https://storybook.js.org/) for local development / component stories
 - [Eslint](https://eslint.org/) and [Prettier](https://prettier.io/) for code linting and formatting
@@ -92,10 +92,8 @@ Once your library is published or packed, you can install it into your react app
 
 ### Install the component library and its peer dependencies
 ```bash
-npm install path-to-your-library styled-components styled-system
+npm install path-to-your-library styled-components themed-props
 ```
-
-If your app uses typescript, you will also need to install `@types/styled-system` as a dev dependency.
 
 ### Import `ThemeProvider` in the root of your app
 
@@ -137,7 +135,7 @@ The resulting folder structure should look something like this:
 
 Also, some changes will have happened in your `package.json` file:
 
-- All necessary dependencies installed: `styled-components`, `styled-system`
+- All necessary dependencies installed: `styled-components`, `themed-props`
 
 > *For more info on how to leverage the usage of the Theme and Styled Props, please refer to [Styled Components](https://styled-components.com/) and [Styled System](https://styled-system.com/) docs respectively.*
 

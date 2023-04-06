@@ -26,17 +26,15 @@ const runLocalMode = async ({
   console.log(chalk.green.bold('Done ✔'));
 
   // Install Dependencies
-  console.log(chalk.white.bold(`Installing ${chalk.blue.bold('styled-components')} and ${chalk.blue.bold('styled-system')}... ☕️`));
-  exec('npm install styled-components styled-system', { cwd: process.cwd() }, async (error) => {
+  console.log(chalk.white.bold(`Installing ${chalk.blue.bold('styled-components')} and ${chalk.blue.bold('themed-props')}... ☕️`));
+  exec('npm install styled-components themed-props', { cwd: process.cwd() }, async (error) => {
     if (error) {
       console.log(error);
       return;
     }
     console.log(chalk.green.bold('Done ✔'));
-    console.log(chalk.yellow.bold(`If you are using Typescript, you will also have to install ${chalk.blue.bold('@types/styled-system')} and ${chalk.blue.bold('@types/styled-components')}`))
-
-    // Create a script in package.json to run ladle server
-    console.log(chalk.blue.bold('Adding script to run Ladle'));
+    console.log(chalk.yellow.bold(`If you are using Typescript, you will also have to install ${chalk.blue.bold('@types/styled-components')}`))
+    
     const pkgJson = await PackageJson.load(process.cwd());
     pkgJson.update({
       scripts: {
