@@ -1,3 +1,6 @@
+import { themeDecorator } from '../src/utils/storybook-decorators';
+import './style.css';
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -7,3 +10,7 @@ export const parameters = {
     },
   },
 }
+
+export const decorators = [
+  themeDecorator
+];
