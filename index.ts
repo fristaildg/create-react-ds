@@ -5,7 +5,7 @@ import runLocalMode from './src/runLocalMode';
 import runStandaloneMode from './src/runStandaloneMode';
 
 program
-  .version('0.39.0', '-v, --version')
+  .version('0.40.0', '-v, --version')
   .usage('[OPTIONS]...')
   .argument('[string]', 'Name of the library')
   .option('-m, --mode <string>', 'Select if it is local or standalone (default)')
