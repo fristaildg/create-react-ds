@@ -3,26 +3,32 @@ export { default as ${componentName} } from './${componentName}';
 `;
 
 const componentTemplate = (componentName) => `import styled from 'styled-components';
+import { ForwardedRef, forwardRef } from 'react';
 
 export type ${componentName}Props = {};
 
 const Styled${componentName} = styled.div\`\`;
 
-const ${componentName} = (props: ${componentName}Props) => {
-  return <Styled${componentName}>${componentName}</Styled${componentName}>;
+const ${componentName} = (props: ${componentName}Props, ref: ForwardedRef<HTMLDivElement>) => {
+  return <Styled${componentName} ref={ref}>${componentName}</Styled${componentName}>;
 };
 
-export default ${componentName};
+export default forwardRef(${componentName});
 `;
 
-const storyTemplate = (componentName) => `import StoryDecorator from 'utils/StoryDecorator';
-import ${componentName} from './${componentName}';
+const storyTemplate = (componentName) => `import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ${componentName} } from '.';
 
 export default {
-  title: '${componentName}',
-  decorators: [StoryDecorator],
-};
-export const Default = () => <${componentName} />;
+  title: 'Components/${componentName}',
+  component: ${componentName},
+} as ComponentMeta<typeof ${componentName}>;
+
+const Template: ComponentStory<typeof ${componentName}> = (args) => (
+  <${componentName} {...args}>${componentName}</${componentName}>
+);
+
+export const Default = Template.bind({});
 `;
 
 module.exports = {
