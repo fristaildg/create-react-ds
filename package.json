@@ -9,8 +9,7 @@
     "components library",
     "esbuild",
     "rollup",
-    "styled components",
-    "styled system"
+    "styled components"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
