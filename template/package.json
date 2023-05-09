@@ -65,7 +65,7 @@
     "rollup": "^3.9.0",
     "rollup-plugin-esbuild": "^5.0.0",
     "styled-components": "^5.3.6",
-    "themed-props": "^0.8.0",
+    "themed-props": "^0.9.0",
     "typescript": "^4.9.4",
     "webpack": "^5.75.0"
   },
@@ -73,6 +73,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.6",
-    "themed-props": "^0.8.0"
+    "themed-props": "^0.9.0"
   }
 }
